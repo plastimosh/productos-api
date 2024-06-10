@@ -51,7 +51,7 @@ app.delete('/productos/:id',(req ,res) =>{
     const id = req.params.id
     const posicion = productos.findIndex(p => p.id == id)
     productos.splice(posicion,1)
-    res.status(200).send('Registro eliminado')
+    res.status(200).send('Registro eliminadocon exito')
 })
 
 const port=3800
