@@ -2,12 +2,14 @@
 import express from 'express'
 import conectar,{pool} from './database.js';
 import services from './services.js';
+import cors from 'cors'
 
 //Se crea el objeto app que funciona como servidor express
 const app = express();
 
 //Middleware
 app.use(express.json())
+app.use(cors())
 
 const productos =[
     {"id":5,"nombre":"Producto 1",precio:123},
